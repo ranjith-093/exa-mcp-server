@@ -2,7 +2,7 @@ name: Deploy Main Backend to Cloud Run
 on:
   push:
     branches:
-      - prod
+      - dev
 jobs:
   deploy:
     runs-on: ubuntu-latest
