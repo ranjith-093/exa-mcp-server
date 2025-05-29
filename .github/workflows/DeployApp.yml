@@ -10,8 +10,8 @@ jobs:
       PROJECT_ID: ${{ secrets.GCP_PROJECT_ID }}
       REGION: ${{ secrets.GCP_REGION }}
       REPO: ${{ github.event.repository.name }}
-      IMAGE_NAME: ${{ env.REPO }}
-      SERVICE_NAME: ${{ env.REPO }}-${{ env.ENV }}
+      IMAGE_NAME: ${{ github.event.repository.name }}
+      SERVICE_NAME: ${{ github.event.repository.name }}-${{ github.ref_name }}
       COMMIT_HASH: ${{ github.sha }}
       ENV: ${{ github.ref_name }}
     steps:
